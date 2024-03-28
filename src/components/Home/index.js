@@ -1,11 +1,15 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
+import {IoArrowDownCircleOutline} from 'react-icons/io5'
 import Header from '../Header'
 import {
   HomeContainer,
   TopContainer,
   HomeImg,
   AboutButton,
+  HomeLeftContainer,
+  HomeText,
+  Name,
 } from './styledComponents'
 import ThemeContext from '../../context/themeContext'
 
@@ -15,21 +19,25 @@ class Home extends Component {
       <ThemeContext.Consumer>
         {value => {
           const {isDarkTheme} = value
-
+          const linkStyle = {
+            textDecoration: 'none',
+          }
           return (
             <HomeContainer isDark={isDarkTheme}>
               <Header />
               <TopContainer>
-                <div>
-                  <p>Hello,</p>
-                  <p>I am Tarun Kumar</p>
-                  <p>I'm a software developer</p>
-                  <Link to="./about">
+                <HomeLeftContainer>
+                  <HomeText>Hi There 👋</HomeText>
+                  <HomeText>
+                    I am <Name isDark={isDarkTheme}>Tarun Kumar</Name>
+                  </HomeText>
+                  <HomeText>I'm a web developer</HomeText>
+                  <Link to="./about" style={linkStyle}>
                     <AboutButton type="button" isDark={isDarkTheme}>
-                      About me
+                      About me <IoArrowDownCircleOutline size={20} />
                     </AboutButton>
                   </Link>
-                </div>
+                </HomeLeftContainer>
                 {/* <img
                   src="https://res.cloudinary.com/dz881zzvx/image/upload/v1687686673/IMG_20191018_115409_qablkk.jpg"
                   alt="profile"
