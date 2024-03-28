@@ -101,15 +101,15 @@ const Header = () => {
             </NavContainer>
 
             <NavMobileContainer isDark={isDarkTheme}>
-              <Link to="/" style={linkStyle}>
-                <MobileLogo
-                  isDark={isDarkTheme}
-                  key="HOME"
-                  isActive={activeMenu === activeMenuCardItem.home}
-                  onClick={() => changeActiveMenu(activeMenuCardItem.home)}
-                >{`<TK/>`}</MobileLogo>
-              </Link>
               <NavMobileIconsList>
+                <Link to="/" style={linkStyle}>
+                  <MobileLogo
+                    isDark={isDarkTheme}
+                    key="HOME"
+                    isActive={activeMenu === activeMenuCardItem.home}
+                    onClick={() => changeActiveMenu(activeMenuCardItem.home)}
+                  >{`<TK/>`}</MobileLogo>
+                </Link>
                 <NavMobileIcon
                   key="HOME"
                   isDark={isDarkTheme}

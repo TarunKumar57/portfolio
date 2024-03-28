@@ -122,11 +122,11 @@ export const TopContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  //   padding: 50px;
-  //   @media (max-width: 600px) {
-  //     padding: 9px;
-  //     width: 100vw;
-  //   }
+  @media (max-width: 600px) {
+    display: block;
+    padding: 0% 10%;
+    padding-top: 7vh;
+  }
 `
 export const HomeLeftContainer = styled.div``
 export const HomeText = styled.h1`
@@ -136,7 +136,11 @@ export const HomeText = styled.h1`
 export const Name = styled.span`
   color: ${props => (props.isDark ? 'orange' : '#fc6603')};
 `
-export const HomeImg = styled.img``
+export const HomeImg = styled.img`
+  @media (max-width: 600px) {
+    display: none;
+  }
+`
 export const AboutButton = styled.button`
   background-color: ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
   border: 1px solid ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
@@ -155,5 +159,64 @@ export const AboutButton = styled.button`
     background-color: ${props => (props.isDark ? '#4f46e5' : '#3b82f6')};
     height: 45px;
     width: 143px;
+  }
+`
+export const IconsListContainer = styled.ul`
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+`
+
+export const LinkedInIcon = styled.li`
+  font-size: 30px;
+  transition: font-size 1s;
+  :hover {
+    font-size: 32px;
+    color: #0866ff;
+  }
+`
+export const GithubIcon = styled.li`
+  font-size: 30px;
+  transition: font-size 1s;
+  :hover {
+    font-size: 32px;
+    color: #000000;
+  }
+`
+export const InstagramIcon = styled.li`
+  font-size: 30px;
+  transition: font-size 1s;
+  :hover {
+    font-size: 32px;
+    color: #bc2a8d;
+    // color: rgb(to top,#8a3ab9, #4c68d7, #cd486b, #fbad50, #fccc63, #bc2a8d, #e95950);
+  }
+`
+export const FacebookIcon = styled.li`
+  font-size: 30px;
+  transition: font-size 1s;
+  :hover {
+    font-size: 32px;
+    color: #4f46e5;
+  }
+`
+export const WhatsAppIcon = styled.li`
+  font-size: 30px;
+  transition: font-size 1s;
+  :hover {
+    font-size: 32px;
+    color: #25d366;
+  }
+`
+export const TelegramIcon = styled.li`
+  font-size: 30px;
+  transition: font-size 1s;
+  :hover {
+    font-size: 32px;
+    color: #3b82f6;
   }
 `

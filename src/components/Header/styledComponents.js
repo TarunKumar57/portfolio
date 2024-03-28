@@ -86,7 +86,7 @@ export const MobileLogo = styled.h1`
 export const NavMobileIconsList = styled.ul`
   align-self: center;
   list-style-type: none;
-  width: 70%;
+  width: 100%;
   padding-left: 0%;
   display: flex;
   align-items: center;
