@@ -39,6 +39,11 @@ export const NavIcon = styled.li`
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
+  :hover {
+    transition: 1s;
+    rotate: 360deg;
+  }
+  transition: 1s;
 `
 export const NavListItem = styled.li`
   border-radius: 9px;

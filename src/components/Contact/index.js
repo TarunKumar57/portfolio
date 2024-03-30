@@ -2,7 +2,6 @@ import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {IoArrowDownCircleOutline} from 'react-icons/io5'
 import {
-  FaFileAlt,
   FaLinkedin,
   FaInstagramSquare,
   FaFacebookSquare,
@@ -19,9 +18,7 @@ import {
   AboutButton,
   HomeLeftContainer,
   HomeText,
-  Hand,
   Name,
-  ButtonsContainer,
   IconsListContainer,
   LinkedInIcon,
   GithubIcon,
@@ -48,25 +45,16 @@ class Home extends Component {
               <Header />
               <TopContainer>
                 <HomeLeftContainer>
-                  <HomeText>
-                    Hi There <Hand>👋</Hand>
-                  </HomeText>
+                  <HomeText>Hi There 👋</HomeText>
                   <HomeText>
                     I am <Name isDark={isDarkTheme}>Tarun Kumar</Name>
                   </HomeText>
                   <HomeText>I am a Web developer</HomeText>
-                  <ButtonsContainer>
-                    <Link to="./about" style={linkStyle}>
-                      <AboutButton type="button" isDark={isDarkTheme}>
-                        About me <IoArrowDownCircleOutline size={20} />
-                      </AboutButton>
-                    </Link>
-                    <Link to="./resume" style={linkStyle}>
-                      <AboutButton type="button" isDark={isDarkTheme}>
-                        <FaFileAlt size={20} /> Resume
-                      </AboutButton>
-                    </Link>
-                  </ButtonsContainer>
+                  <Link to="./about" style={linkStyle}>
+                    <AboutButton type="button" isDark={isDarkTheme}>
+                      About me <IoArrowDownCircleOutline size={20} />
+                    </AboutButton>
+                  </Link>
                   <IconsListContainer isDark={isDarkTheme}>
                     <Link to="./" style={linkStyle}>
                       <LinkedInIcon>
