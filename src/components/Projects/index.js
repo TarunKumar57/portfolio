@@ -2,25 +2,32 @@ import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {IoArrowDownCircleOutline} from 'react-icons/io5'
 import {
+  FaFileAlt,
   FaLinkedin,
   FaInstagramSquare,
+  FaFacebookSquare,
   FaGithubSquare,
+  FaWhatsappSquare,
   FaTelegram,
 } from 'react-icons/fa'
 
 import Header from '../Header'
 import {
-  ContactContainer,
+  HomeContainer,
   TopContainer,
   HomeImg,
   AboutButton,
   HomeLeftContainer,
   HomeText,
+  Hand,
   Name,
+  ButtonsContainer,
   IconsListContainer,
   LinkedInIcon,
   GithubIcon,
   InstagramIcon,
+  FacebookIcon,
+  WhatsAppIcon,
   TelegramIcon,
 } from './styledComponents'
 
@@ -37,20 +44,29 @@ class Home extends Component {
             color: isDarkTheme ? '#f9f9f9' : '#181818',
           }
           return (
-            <ContactContainer isDark={isDarkTheme}>
+            <HomeContainer isDark={isDarkTheme}>
               <Header />
               <TopContainer>
                 <HomeLeftContainer>
-                  <HomeText>Hi There 👋</HomeText>
+                  <HomeText>
+                    Hi There <Hand>👋</Hand>
+                  </HomeText>
                   <HomeText>
                     I am <Name isDark={isDarkTheme}>Tarun Kumar</Name>
                   </HomeText>
                   <HomeText>I am a Web developer</HomeText>
-                  <Link to="./about" style={linkStyle}>
-                    <AboutButton type="button" isDark={isDarkTheme}>
-                      About me <IoArrowDownCircleOutline size={20} />
-                    </AboutButton>
-                  </Link>
+                  <ButtonsContainer>
+                    <Link to="./about" style={linkStyle}>
+                      <AboutButton type="button" isDark={isDarkTheme}>
+                        About me <IoArrowDownCircleOutline size={20} />
+                      </AboutButton>
+                    </Link>
+                    <Link to="./resume" style={linkStyle}>
+                      <AboutButton type="button" isDark={isDarkTheme}>
+                        <FaFileAlt size={20} /> Resume
+                      </AboutButton>
+                    </Link>
+                  </ButtonsContainer>
                   <IconsListContainer isDark={isDarkTheme}>
                     <Link to="./" style={linkStyle}>
                       <LinkedInIcon>
@@ -67,7 +83,16 @@ class Home extends Component {
                         <FaInstagramSquare />
                       </InstagramIcon>
                     </Link>
-
+                    <Link to="./" style={linkStyle}>
+                      <FacebookIcon>
+                        <FaFacebookSquare />
+                      </FacebookIcon>
+                    </Link>
+                    <Link to="./" style={linkStyle}>
+                      <WhatsAppIcon>
+                        <FaWhatsappSquare />
+                      </WhatsAppIcon>
+                    </Link>
                     <Link to="./" style={linkStyle}>
                       <TelegramIcon>
                         <FaTelegram />
@@ -88,7 +113,7 @@ class Home extends Component {
                   alt="img"
                 /> */}
               </TopContainer>
-            </ContactContainer>
+            </HomeContainer>
           )
         }}
       </ThemeContext.Consumer>
