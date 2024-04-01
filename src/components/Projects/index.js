@@ -1,37 +1,89 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
-import {IoArrowDownCircleOutline} from 'react-icons/io5'
-import {
-  FaFileAlt,
-  FaLinkedin,
-  FaInstagramSquare,
-  FaFacebookSquare,
-  FaGithubSquare,
-  FaWhatsappSquare,
-  FaTelegram,
-} from 'react-icons/fa'
+import {IoArrowForward} from 'react-icons/io5'
 
 import Header from '../Header'
 import {
-  HomeContainer,
+  ProjectsContainer,
   TopContainer,
-  HomeImg,
-  AboutButton,
-  HomeLeftContainer,
-  HomeText,
-  Hand,
-  Name,
-  ButtonsContainer,
-  IconsListContainer,
-  LinkedInIcon,
-  GithubIcon,
-  InstagramIcon,
-  FacebookIcon,
-  WhatsAppIcon,
-  TelegramIcon,
+  ProjectsText,
+  ProjectsListContainer,
+  ProjectsListItem,
+  ProjectName,
+  ProjectDescription,
+  VisitButton,
+  VisitLink,
+  ViewAllButton,
 } from './styledComponents'
+// import ProjectItem from '../ProjectItem'
 
 import ThemeContext from '../../context/themeContext'
+
+const projectsList = [
+  {
+    id: '0',
+    projectName: 'Insta Share',
+    projectUrl: 'https://github.com/TarunKumar57/insta-share-app',
+    description:
+      'Implemented responsive Streaming Application like Instagram Clone.',
+  },
+  {
+    id: '1',
+    projectName: 'NxtWatch',
+    projectUrl: 'https://github.com/TarunKumar57/nxt-watch-app',
+    description:
+      'Nxt Watch application which is a clone for YouTube developed using React js.',
+  },
+  {
+    id: '2',
+    projectName: 'Jobby App',
+    projectUrl: 'https://github.com/TarunKumar57/jobby-app',
+    description:
+      'Jobby App where users can see a list of jobs developed using React js',
+  },
+  {
+    id: '3',
+    projectName: 'IPL Dashboard',
+    projectUrl: 'https://github.com/TarunKumar57/ipl-dashboard',
+    description:
+      'IPL Dashboard app where users can list of ipl team, individual team details and respective team matches info',
+  },
+  {
+    id: '4',
+    projectName: 'Rock Paper Scissors Game',
+    projectUrl: 'https://github.com/TarunKumar57/rock-paper-scissors-game',
+    description:
+      'Implemented Rock Paper Scissors App you can play this Game when ever you want.',
+  },
+  {
+    id: '5',
+    projectName: 'Match Game',
+    projectUrl: 'https://github.com/TarunKumar57/match-game',
+    description:
+      'Implemented Match App you can play this Game when ever you want.',
+  },
+  {
+    id: '6',
+    projectName: 'Passwords Manager',
+    projectUrl: 'https://github.com/TarunKumar57/passwords-manager',
+    description:
+      'Implemented Password manager application where users can add website passwords, search, delete and see passwords.',
+  },
+  {
+    id: '7',
+    projectName: 'Browser History',
+    projectUrl: 'https://github.com/TarunKumar57/browser-history',
+    description:
+      'Implemented Browser history application which is a clone for google history where users can search and delete history.',
+  },
+  {
+    id: '8',
+    projectName: 'Portfolio',
+    projectUrl: 'https://github.com/TarunKumar57/portfolio',
+    description:
+      'Developed a responsive web application for Portfolio where other people like interviewers can see about, education, list of projects, skills, contact info of mine',
+  },
+]
 
 class Home extends Component {
   render() {
@@ -44,76 +96,32 @@ class Home extends Component {
             color: isDarkTheme ? '#f9f9f9' : '#181818',
           }
           return (
-            <HomeContainer isDark={isDarkTheme}>
+            <ProjectsContainer isDark={isDarkTheme}>
               <Header />
               <TopContainer>
-                <HomeLeftContainer>
-                  <HomeText>
-                    Hi There <Hand>👋</Hand>
-                  </HomeText>
-                  <HomeText>
-                    I am <Name isDark={isDarkTheme}>Tarun Kumar</Name>
-                  </HomeText>
-                  <HomeText>I am a Web developer</HomeText>
-                  <ButtonsContainer>
-                    <Link to="./about" style={linkStyle}>
-                      <AboutButton type="button" isDark={isDarkTheme}>
-                        About me <IoArrowDownCircleOutline size={20} />
-                      </AboutButton>
-                    </Link>
-                    <Link to="./resume" style={linkStyle}>
-                      <AboutButton type="button" isDark={isDarkTheme}>
-                        <FaFileAlt size={20} /> Resume
-                      </AboutButton>
-                    </Link>
-                  </ButtonsContainer>
-                  <IconsListContainer isDark={isDarkTheme}>
-                    <Link to="./" style={linkStyle}>
-                      <LinkedInIcon>
-                        <FaLinkedin />
-                      </LinkedInIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
-                      <GithubIcon>
-                        <FaGithubSquare />
-                      </GithubIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
-                      <InstagramIcon>
-                        <FaInstagramSquare />
-                      </InstagramIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
-                      <FacebookIcon>
-                        <FaFacebookSquare />
-                      </FacebookIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
-                      <WhatsAppIcon>
-                        <FaWhatsappSquare />
-                      </WhatsAppIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
-                      <TelegramIcon>
-                        <FaTelegram />
-                      </TelegramIcon>
-                    </Link>
-                  </IconsListContainer>
-                </HomeLeftContainer>
-                {/* <img
-                  src="https://res.cloudinary.com/dz881zzvx/image/upload/v1687686673/IMG_20191018_115409_qablkk.jpg"
-                  alt="profile"
-                /> */}
-                <HomeImg
-                  src="https://res.cloudinary.com/dz881zzvx/image/upload/v1711608894/male-web-developer-doing-research-on-development-5691622-4759504_sibkp8.webp"
-                  alt="img"
-                />
-                {/*  <AvatarImg
-                  src="https://res.cloudinary.com/dz881zzvx/image/upload/v1711610840/images_dm2wzu.jpg"
-                  alt="img"
-                /> */}
+                <ProjectsText isDark={isDarkTheme}>Projects</ProjectsText>
+                <ProjectsListContainer>
+                  {projectsList.map(each => (
+                    <ProjectsListItem isDark={isDarkTheme}>
+                      <ProjectName>{each.projectName}</ProjectName>
+                      <ProjectDescription>
+                        {each.description}
+                      </ProjectDescription>
+                      <VisitButton isDark={isDarkTheme}>
+                        <VisitLink href={each.projectUrl} isDark={isDarkTheme}>
+                          Visit <IoArrowForward />
+                        </VisitLink>
+                      </VisitButton>
+                    </ProjectsListItem>
+                  ))}
+                </ProjectsListContainer>
+                <Link to="./all-projects" style={linkStyle}>
+                  <ViewAllButton type="button" isDark={isDarkTheme}>
+                    View All <IoArrowForward size={20} />
+                  </ViewAllButton>
+                </Link>
               </TopContainer>
-            </HomeContainer>
+            </ProjectsContainer>
           )
         }}
       </ThemeContext.Consumer>

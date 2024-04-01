@@ -24,15 +24,24 @@ export const TopContainer = styled.div`
     padding-top: 7vh;
   }
 `
-export const ContactLeftContainer = styled.div``
+export const ContactLeftContainer = styled.div`
+  @media (max-width: 600px) {
+    display: none;
+  }
+`
 export const ContactRightContainer = styled.div``
+export const ContactMobileContainer = styled.div`
+  @media (min-width: 600px) {
+    display: none;
+  }
+`
 export const ContactText = styled.h1``
 export const Name = styled.span`
   color: ${props => (props.isDark ? 'orange' : '#fc6603')};
 `
 export const AvatarImg = styled.img`
   border-radius: 50%;
-  height: 100px;
+  height: 210px;
 `
 export const AboutButton = styled.button`
   background-color: ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
@@ -107,6 +116,7 @@ export const TelegramIcon = styled.li`
     color: #3b82f6;
   }
 `
+
 export const ContactDetails = styled.p`
   font-size: 18px;
   display: flex;
@@ -122,6 +132,9 @@ export const DesignedByText = styled.p`
   text-align: center;
   font-weight: bold;
   font-family: 'Nunito', sans-serif;
+  @media (max-width: 600px) {
+    padding-top: 10%;
+  }
 `
 export const LikeIcon = styled.span`
   margin: 0px 9px;

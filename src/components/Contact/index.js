@@ -17,7 +17,7 @@ import Header from '../Header'
 import {
   ContactContainer,
   TopContainer,
-  // AvatarImg,
+  AvatarImg,
   ContactLeftContainer,
   ContactRightContainer,
   ContactText,
@@ -33,6 +33,7 @@ import {
   ContactDetailsText,
   DesignedByText,
   LikeIcon,
+  ContactMobileContainer,
 } from './styledComponents'
 
 import ThemeContext from '../../context/themeContext'
@@ -52,6 +53,14 @@ class Home extends Component {
               <Header />
 
               <TopContainer>
+                <AvatarImg
+                  src={
+                    isDarkTheme
+                      ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711947766/Screenshot_2024_0401_102506_yxj1xa.png'
+                      : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711947742/Screenshot_2024_0401_102407_onm2dy.png'
+                  }
+                  alt="img"
+                />
                 <ContactLeftContainer>
                   <ContactText>Tarun Kumar Portfolio</ContactText>
                   <p>
@@ -111,15 +120,46 @@ class Home extends Component {
                       Andhra Pradesh, India - 534340
                     </ContactDetailsText>
                   </ContactDetails>
-                  {/* <AvatarImg
-                  src={
-                    isDarkTheme
-                      ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711947766/Screenshot_2024_0401_102506_yxj1xa.png'
-                      : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711947742/Screenshot_2024_0401_102407_onm2dy.png'
-                  }
-                  alt="img"
-                /> */}
                 </ContactRightContainer>
+                <ContactMobileContainer>
+                  <ContactText>Tarun Kumar Portfolio</ContactText>
+                  <p>
+                    Thank you for visiting my personal portfolio website.
+                    <br /> Connect with me over socials.
+                  </p>
+                  <IconsListContainer isDark={isDarkTheme}>
+                    <Link to="./" style={linkStyle}>
+                      <LinkedInIcon>
+                        <FaLinkedin />
+                      </LinkedInIcon>
+                    </Link>
+                    <Link to="./" style={linkStyle}>
+                      <GithubIcon>
+                        <FaGithubSquare />
+                      </GithubIcon>
+                    </Link>
+                    <Link to="./" style={linkStyle}>
+                      <InstagramIcon>
+                        <FaInstagramSquare />
+                      </InstagramIcon>
+                    </Link>
+                    <Link to="./" style={linkStyle}>
+                      <FacebookIcon>
+                        <FaFacebookSquare />
+                      </FacebookIcon>
+                    </Link>
+                    <Link to="./" style={linkStyle}>
+                      <WhatsAppIcon>
+                        <FaWhatsappSquare />
+                      </WhatsAppIcon>
+                    </Link>
+                    <Link to="./" style={linkStyle}>
+                      <TelegramIcon>
+                        <FaTelegram />
+                      </TelegramIcon>
+                    </Link>
+                  </IconsListContainer>
+                </ContactMobileContainer>
               </TopContainer>
               <DesignedByText>
                 Designed With By

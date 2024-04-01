@@ -2,7 +2,7 @@ import {Component} from 'react'
 // import {Redirect, Route, Switch} from 'react-router-dom'
 import './App.css'
 // import Header from './components/Header'
-import Contact from './components/Contact'
+import Projects from './components/Projects'
 import ThemeContext from './context/themeContext'
 // Replace your code here
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
           changeTheme: this.changeTheme,
         }}
       >
-        <Contact />
+        <Projects />
         {/* <Switch>
           <Route exact path="/login" component={Login} />
           <ProtectedRoute exact path="/" component={Home} />

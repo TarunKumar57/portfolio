@@ -1,103 +1,6 @@
 import styled from 'styled-components'
 
-// export const NavContainer = styled.div`
-//   overflow: hidden;
-//   position: fixed;
-//   width: 100%;
-//   // background-color: ${props => (props.isDark ? '#212121' : '#ffffff')};
-//   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   height: 10vh;
-//   font-family: Roboto;
-//   margin-bottom: 0px;
-//   background-color: transparent;
-//   @media (max-width: 600px) {
-//     display: none;
-//   }
-// `
-
-// export const NavListContainer = styled.div`
-//   width: 50%;
-//   font-weight: 500;
-//   list-style-type: none;
-//   padding-left: 0%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-around;
-// `
-// export const NavIcon = styled.li`
-//   font-size: 30px;
-//   font-weight: bold;
-//   cursor: pointer;
-// `
-// export const NavListItem = styled.li`
-//   border-radius: 9px;
-//   height: 40px;
-//   width: 80px;
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: center;
-//   cursor: pointer;
-//   background-color: ${props => {
-//     const {isDark} = props
-//     const color = isDark ? '#909090' : '#cbd5e1'
-//     return props.isActive ? color : ''
-//   }};
-//   :hover {
-//     background-color: ${props => (props.isDark ? '#909090' : '#cbd5e1')};
-//   }
-// `
-
-// export const NavMobileContainer = styled.div`
-//   overflow: hidden;
-//   position: fixed;
-//   width: 100%;
-//   background-color: transparent;
-//   // background-color: ${props => (props.isDark ? '#000000' : '#ffffff')};
-//   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
-//   font-family: Roboto;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   height: 70px;
-//   margin-bottom: 0px;
-//   @media (min-width: 600px) {
-//     display: none;
-//   }
-// `
-// export const MobileLogo = styled.h1`
-//   font-size: 30px;
-//   margin-left: 5px;
-//   font-family: brush script mt, cursive;
-//   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
-// `
-
-// export const NavMobileIconsList = styled.ul`
-//   align-self: center;
-//   list-style-type: none;
-//   width: 70%;
-//   padding-left: 0%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   margin-right: 3%;
-// `
-// export const NavMobileIcon = styled.li`
-//   margin-top: 9px;
-//   font-size: 30px;
-//   outline: none;
-//   cursor: pointer;
-//   background-color: ${props => {
-//     const {isDark} = props
-//     const color = isDark ? '#424242' : '#e2e8f0'
-//     return props.isActive ? color : ''
-//   }};
-// `
-
-export const HomeContainer = styled.div`
+export const ProjectsContainer = styled.div`
   background-image: url(${props =>
     props.isDark
       ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367869/download_iwonwv.jpg'
@@ -108,66 +11,73 @@ export const HomeContainer = styled.div`
 `
 export const TopContainer = styled.div`
   padding-top: 11vh;
-  height: 100vh;
+  min-height: 100vh;
   font-family: Roboto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+`
+export const ProjectsText = styled.h1`
+  color: ${props => (props.isDark ? 'orange' : '#fc6603')};
+  margin: 9px;
+  //   text-align: center;
+`
+export const ProjectsListContainer = styled.ul`
+  list-style-type: none;
+  //   padding: 0% 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
   @media (max-width: 600px) {
     display: block;
-    padding: 0% 10%;
-    padding-top: 7vh;
+    padding: 0% 5%;
   }
 `
-export const HomeLeftContainer = styled.div``
-export const HomeText = styled.h1``
-export const Hand = styled.span`
-  font-size: 36px;
-  animation-duration: 1.8s;
-  animation-iteration-count: infinite;
-  animation-name: wave;
-  display: inline-block;
-  transform-origin: 70% 70%;
-  @keyframes wave {
-    0% {
-      transform: rotate(0deg);
-    }
-    10% {
-      transform: rotate(-10deg);
-    }
-    20% {
-      transform: rotate(12deg);
-    }
-    30% {
-      transform: rotate(-10deg);
-    }
-    40% {
-      transform: rotate(9deg);
-    }
-    50% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-`
-export const Name = styled.span`
-  color: ${props => (props.isDark ? 'orange' : '#fc6603')};
-`
-export const HomeImg = styled.img`
+export const ProjectsListItem = styled.li`
+  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+  width: 321px;
+  border: 1px solid ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+  border-radius: 9px;
+  margin: 9px;
+  padding: 0px 9px;
   @media (max-width: 600px) {
-    display: none;
+    width: 90vw;
   }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 `
-export const ButtonsContainer = styled.div`
+export const ProjectName = styled.h2`
+  margin-bottom: 0px;
+`
+export const ProjectDescription = styled.p``
+export const VisitLink = styled.a`
+  text-decoration: none;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
 `
-export const AboutButton = styled.button`
+export const VisitButton = styled.button`
+  font-family: Roboto;
+  width: 80px;
+  font-size: 18px;
+  background-color: transparent;
+  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+  border: 1px solid ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+  border-radius: 5px;
+  :hover {
+    background-color: ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
+    border: 1px solid ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
+    justify-content: space-around;
+  }
+  margin-bottom: 9px;
+`
+export const ViewAllButton = styled.button`
   background-color: ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
   border: 1px solid ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
   height: 40px;
@@ -176,6 +86,7 @@ export const AboutButton = styled.button`
   color: #ffffff;
   margin-top: 9px;
   font-family: Roboto;
+  font-size: 18px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -185,63 +96,4 @@ export const AboutButton = styled.button`
     justify-content: space-around;
   }
   cursor: pointer;
-`
-export const IconsListContainer = styled.ul`
-  list-style-type: none;
-  padding-left: 0px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
-`
-
-export const LinkedInIcon = styled.li`
-  font-size: 30px;
-  transition: font-size 1s;
-  :hover {
-    font-size: 32px;
-    color: #0866ff;
-  }
-`
-export const GithubIcon = styled.li`
-  font-size: 30px;
-  transition: font-size 1s;
-  :hover {
-    font-size: 32px;
-    color: #000000;
-  }
-`
-export const InstagramIcon = styled.li`
-  font-size: 30px;
-  transition: font-size 1s;
-  :hover {
-    font-size: 32px;
-    color: #bc2a8d;
-    // color: rgb(to top,#8a3ab9, #4c68d7, #cd486b, #fbad50, #fccc63, #bc2a8d, #e95950);
-  }
-`
-export const FacebookIcon = styled.li`
-  font-size: 30px;
-  transition: font-size 1s;
-  :hover {
-    font-size: 32px;
-    color: #4f46e5;
-  }
-`
-export const WhatsAppIcon = styled.li`
-  font-size: 30px;
-  transition: font-size 1s;
-  :hover {
-    font-size: 32px;
-    color: #25d366;
-  }
-`
-export const TelegramIcon = styled.li`
-  font-size: 30px;
-  transition: font-size 1s;
-  :hover {
-    font-size: 32px;
-    color: #3b82f6;
-  }
 `
