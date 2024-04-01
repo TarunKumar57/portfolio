@@ -5,9 +5,7 @@ import {
   FaFileAlt,
   FaLinkedin,
   FaInstagramSquare,
-  FaFacebookSquare,
   FaGithubSquare,
-  FaWhatsappSquare,
   FaTelegram,
 } from 'react-icons/fa'
 
@@ -26,8 +24,6 @@ import {
   LinkedInIcon,
   GithubIcon,
   InstagramIcon,
-  FacebookIcon,
-  WhatsAppIcon,
   TelegramIcon,
 } from './styledComponents'
 
@@ -83,16 +79,7 @@ class Home extends Component {
                         <FaInstagramSquare />
                       </InstagramIcon>
                     </Link>
-                    <Link to="./" style={linkStyle}>
-                      <FacebookIcon>
-                        <FaFacebookSquare />
-                      </FacebookIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
-                      <WhatsAppIcon>
-                        <FaWhatsappSquare />
-                      </WhatsAppIcon>
-                    </Link>
+
                     <Link to="./" style={linkStyle}>
                       <TelegramIcon>
                         <FaTelegram />

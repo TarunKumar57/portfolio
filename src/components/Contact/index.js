@@ -1,27 +1,38 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
-import {IoArrowDownCircleOutline} from 'react-icons/io5'
+import {IoMail} from 'react-icons/io5'
+import {IoIosCall} from 'react-icons/io'
+import {GrMapLocation} from 'react-icons/gr'
 import {
   FaLinkedin,
   FaInstagramSquare,
+  FaFacebookSquare,
   FaGithubSquare,
+  FaWhatsappSquare,
   FaTelegram,
+  FaMapMarked,
 } from 'react-icons/fa'
-
+import {FcLike} from 'react-icons/fc'
 import Header from '../Header'
 import {
   ContactContainer,
   TopContainer,
-  HomeImg,
-  AboutButton,
-  HomeLeftContainer,
-  HomeText,
+  // AvatarImg,
+  ContactLeftContainer,
+  ContactRightContainer,
+  ContactText,
   Name,
   IconsListContainer,
   LinkedInIcon,
   GithubIcon,
+  FacebookIcon,
+  WhatsAppIcon,
   InstagramIcon,
   TelegramIcon,
+  ContactDetails,
+  ContactDetailsText,
+  DesignedByText,
+  LikeIcon,
 } from './styledComponents'
 
 import ThemeContext from '../../context/themeContext'
@@ -39,18 +50,14 @@ class Home extends Component {
           return (
             <ContactContainer isDark={isDarkTheme}>
               <Header />
+
               <TopContainer>
-                <HomeLeftContainer>
-                  <HomeText>Hi There 👋</HomeText>
-                  <HomeText>
-                    I am <Name isDark={isDarkTheme}>Tarun Kumar</Name>
-                  </HomeText>
-                  <HomeText>I am a Web developer</HomeText>
-                  <Link to="./about" style={linkStyle}>
-                    <AboutButton type="button" isDark={isDarkTheme}>
-                      About me <IoArrowDownCircleOutline size={20} />
-                    </AboutButton>
-                  </Link>
+                <ContactLeftContainer>
+                  <ContactText>Tarun Kumar Portfolio</ContactText>
+                  <p>
+                    Thank you for visiting my personal portfolio website.
+                    <br /> Connect with me over socials.
+                  </p>
                   <IconsListContainer isDark={isDarkTheme}>
                     <Link to="./" style={linkStyle}>
                       <LinkedInIcon>
@@ -67,27 +74,60 @@ class Home extends Component {
                         <FaInstagramSquare />
                       </InstagramIcon>
                     </Link>
-
+                    <Link to="./" style={linkStyle}>
+                      <FacebookIcon>
+                        <FaFacebookSquare />
+                      </FacebookIcon>
+                    </Link>
+                    <Link to="./" style={linkStyle}>
+                      <WhatsAppIcon>
+                        <FaWhatsappSquare />
+                      </WhatsAppIcon>
+                    </Link>
                     <Link to="./" style={linkStyle}>
                       <TelegramIcon>
                         <FaTelegram />
                       </TelegramIcon>
                     </Link>
                   </IconsListContainer>
-                </HomeLeftContainer>
-                {/* <img
-                  src="https://res.cloudinary.com/dz881zzvx/image/upload/v1687686673/IMG_20191018_115409_qablkk.jpg"
-                  alt="profile"
-                /> */}
-                <HomeImg
-                  src="https://res.cloudinary.com/dz881zzvx/image/upload/v1711608894/male-web-developer-doing-research-on-development-5691622-4759504_sibkp8.webp"
+                </ContactLeftContainer>
+                <ContactRightContainer>
+                  <ContactText>Contact Me</ContactText>
+                  <ContactDetails>
+                    <IoMail size={25} />
+                    <ContactDetailsText> tk96925@gmail.com</ContactDetailsText>
+                  </ContactDetails>
+                  <ContactDetails>
+                    <IoIosCall size={25} />
+                    <ContactDetailsText>+91 XXXXX XXXXX</ContactDetailsText>
+                  </ContactDetails>
+                  <ContactDetails>
+                    {isDarkTheme ? (
+                      <FaMapMarked size={25} />
+                    ) : (
+                      <GrMapLocation size={25} />
+                    )}
+                    <ContactDetailsText>
+                      Andhra Pradesh, India - 534340
+                    </ContactDetailsText>
+                  </ContactDetails>
+                  {/* <AvatarImg
+                  src={
+                    isDarkTheme
+                      ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711947766/Screenshot_2024_0401_102506_yxj1xa.png'
+                      : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711947742/Screenshot_2024_0401_102407_onm2dy.png'
+                  }
                   alt="img"
-                />
-                {/*  <AvatarImg
-                  src="https://res.cloudinary.com/dz881zzvx/image/upload/v1711610840/images_dm2wzu.jpg"
-                  alt="img"
                 /> */}
+                </ContactRightContainer>
               </TopContainer>
+              <DesignedByText>
+                Designed With By
+                <LikeIcon>
+                  <FcLike />
+                </LikeIcon>
+                <Name isDark={isDarkTheme}>Tarun Kumar</Name>
+              </DesignedByText>
             </ContactContainer>
           )
         }}

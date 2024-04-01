@@ -8,33 +8,31 @@ export const ContactContainer = styled.div`
   background-size: cover;
   background-position: center;
   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+  height: 100vh;
 `
 export const TopContainer = styled.div`
   padding-top: 11vh;
-  height: 100vh;
+  height: max-content;
   font-family: Roboto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   @media (max-width: 600px) {
     display: block;
     padding: 0% 10%;
     padding-top: 7vh;
   }
 `
-export const HomeLeftContainer = styled.div``
-export const HomeText = styled.h1`
-  //   margin-top: 0px;
-  //   margin-bottom: 9px;
-`
+export const ContactLeftContainer = styled.div``
+export const ContactRightContainer = styled.div``
+export const ContactText = styled.h1``
 export const Name = styled.span`
   color: ${props => (props.isDark ? 'orange' : '#fc6603')};
 `
-export const HomeImg = styled.img`
-  @media (max-width: 600px) {
-    display: none;
-  }
+export const AvatarImg = styled.img`
+  border-radius: 50%;
+  height: 100px;
 `
 export const AboutButton = styled.button`
   background-color: ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
@@ -70,7 +68,6 @@ export const LinkedInIcon = styled.li`
   font-size: 30px;
   transition: font-size 1s;
   :hover {
-    font-size: 32px;
     color: #0866ff;
   }
 `
@@ -78,7 +75,6 @@ export const GithubIcon = styled.li`
   font-size: 30px;
   transition: font-size 1s;
   :hover {
-    font-size: 32px;
     color: #000000;
   }
 `
@@ -86,7 +82,6 @@ export const InstagramIcon = styled.li`
   font-size: 30px;
   transition: font-size 1s;
   :hover {
-    font-size: 32px;
     color: #bc2a8d;
     // color: rgb(to top,#8a3ab9, #4c68d7, #cd486b, #fbad50, #fccc63, #bc2a8d, #e95950);
   }
@@ -95,7 +90,6 @@ export const FacebookIcon = styled.li`
   font-size: 30px;
   transition: font-size 1s;
   :hover {
-    font-size: 32px;
     color: #4f46e5;
   }
 `
@@ -103,7 +97,6 @@ export const WhatsAppIcon = styled.li`
   font-size: 30px;
   transition: font-size 1s;
   :hover {
-    font-size: 32px;
     color: #25d366;
   }
 `
@@ -111,7 +104,59 @@ export const TelegramIcon = styled.li`
   font-size: 30px;
   transition: font-size 1s;
   :hover {
-    font-size: 32px;
     color: #3b82f6;
+  }
+`
+export const ContactDetails = styled.p`
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  //   justify-content: space-between;
+  margin: 0px;
+`
+export const ContactDetailsText = styled.p`
+  margin-left: 9px;
+`
+export const DesignedByText = styled.p`
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+`
+export const LikeIcon = styled.span`
+  margin: 0px 9px;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-name: heart;
+  display: inline-block;
+  transform-origin: 70% 70%;
+  @keyframes heart {
+    0% {
+      transform: scale(1);
+    }
+    /* 10% {
+      transform:  scale(1.3);
+    }
+    20% {
+      transform:  scale(0.9);
+    }
+    30% {
+      transform:  scale(1.2);
+    }
+    40% {
+      transform:  scale(0.9);
+    }*/
+    50% {
+      transform: scale(1.3);
+    }
+    /* 60% {
+      transform:  scale(0.95);
+    }
+    70% {
+      transform:  scale(1);
+    }*/
+    100% {
+      transform: scale(1);
+    }
   }
 `
