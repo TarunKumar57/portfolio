@@ -50,6 +50,13 @@ export const ProjectsListItem = styled.li`
   align-items: flex-start;
   justify-content: space-between;
 `
+export const ProjectLogo = styled.img`
+  height: 50px;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-top: 9px;
+`
 export const ProjectName = styled.h2`
   margin-bottom: 0px;
 `
