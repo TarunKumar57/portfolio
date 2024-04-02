@@ -1,17 +1,16 @@
 import styled from 'styled-components'
 
-export const ContactContainer = styled.div`
-  background-image: url(${props =>
-    props.isDark
-      ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367869/download_iwonwv.jpg'
-      : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367876/winter-blue-pink-gradient-background-vector_53876-117276_uwqnv8.jpg'});
-  background-size: cover;
-  background-position: center;
-  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
-  height: 100vh;
-`
+export const ContactContainer = styled.div``
+//   background-image: url(${props =>
+//     props.isDark
+//       ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367869/download_iwonwv.jpg'
+//       : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367876/winter-blue-pink-gradient-background-vector_53876-117276_uwqnv8.jpg'});
+//   background-size: cover;
+//   background-position: center;
+//   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+//   height: 100vh;
+
 export const TopContainer = styled.div`
-  padding-top: 11vh;
   height: max-content;
   font-family: Roboto;
   display: flex;
@@ -21,7 +20,6 @@ export const TopContainer = styled.div`
   @media (max-width: 600px) {
     display: block;
     padding: 0% 10%;
-    padding-top: 7vh;
   }
 `
 export const ContactLeftContainer = styled.div`
@@ -42,6 +40,9 @@ export const Name = styled.span`
 export const AvatarImg = styled.img`
   border-radius: 50%;
   height: 210px;
+  @media (max-width: 600px) {
+    height: 123px;
+  }
 `
 export const AboutButton = styled.button`
   background-color: ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};

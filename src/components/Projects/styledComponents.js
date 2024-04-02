@@ -1,27 +1,28 @@
 import styled from 'styled-components'
 
-export const ProjectsContainer = styled.div`
-  background-image: url(${props =>
-    props.isDark
-      ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367869/download_iwonwv.jpg'
-      : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367876/winter-blue-pink-gradient-background-vector_53876-117276_uwqnv8.jpg'});
-  background-size: cover;
-  background-position: center;
-  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
-`
+export const ProjectsContainer = styled.div``
+//   background-image: url(${props =>
+//     props.isDark
+//       ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367869/download_iwonwv.jpg'
+//       : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367876/winter-blue-pink-gradient-background-vector_53876-117276_uwqnv8.jpg'});
+//   background-size: cover;
+//   background-position: center;
+//   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+
 export const TopContainer = styled.div`
-  padding: 11vh 0px;
   min-height: 100vh;
   font-family: Roboto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5vh;
 `
 export const ProjectsText = styled.h1`
   color: ${props => (props.isDark ? 'orange' : '#fc6603')};
   margin: 9px;
   //   text-align: center;
+  padding-top: 3vh;
 `
 export const ProjectsListContainer = styled.ul`
   list-style-type: none;
@@ -56,9 +57,15 @@ export const ProjectLogo = styled.img`
   border: none;
   outline: none;
   margin-top: 9px;
+  @media (max-width: 600px) {
+    height: 100%;
+  }
 `
 export const ProjectName = styled.h2`
   margin-bottom: 0px;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `
 export const ProjectDescription = styled.p``
 export const VisitLink = styled.a`

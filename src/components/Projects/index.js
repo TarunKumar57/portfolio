@@ -36,6 +36,7 @@ class Home extends Component {
               logoUrl: isDarkTheme
                 ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1712049879/Screenshot_2024-04-02_144741_ksl9nl.png'
                 : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1712049873/Screenshot_2024-04-02_144754_zn8ayx.png',
+              siteText: 'Visit',
             },
             {
               id: '1',
@@ -46,6 +47,7 @@ class Home extends Component {
               logoUrl: isDarkTheme
                 ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
                 : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png',
+              siteText: 'Watch',
             },
             {
               id: '2',
@@ -54,6 +56,7 @@ class Home extends Component {
               description:
                 'Jobby App where users can see a list of jobs developed using React js',
               logoUrl: 'https://assets.ccbp.in/frontend/react-js/logo-img.png',
+              siteText: 'Visit',
             },
             {
               id: '3',
@@ -63,6 +66,7 @@ class Home extends Component {
                 'Nxt Trendz application which is a clone for ECommerce applications like Amazon, Flipkart.',
               logoUrl:
                 'https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png',
+              siteText: 'Shop',
             },
 
             {
@@ -75,6 +79,7 @@ class Home extends Component {
               logoUrl: isDarkTheme
                 ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1712051209/Screenshot_2024-04-02_150848_oz5ncg.png'
                 : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1712051204/Screenshot_2024-04-02_150900_fccyea.png',
+              siteText: 'Play',
             },
             {
               id: '5',
@@ -84,6 +89,7 @@ class Home extends Component {
                 'Implemented Match App you can play this Game when ever you want.',
               logoUrl:
                 'https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png ',
+              siteText: 'Play',
             },
 
             /* {
@@ -94,7 +100,7 @@ class Home extends Component {
                 'IPL Dashboard app where users can list of ipl team, individual team details and respective team matches info',
               logoUrl:
                 'https://res.cloudinary.com/dz881zzvx/image/upload/v1712045711/IPL-Logo_vn9n4s.jpg',
-            },
+           siteText: 'Visit' },
             {
               id: '7',
               projectName: 'Passwords Manager',
@@ -103,7 +109,7 @@ class Home extends Component {
                 'Implemented Password manager application where users can add website passwords, search, delete and see passwords.',
               logoUrl:
                 'https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png ',
-            },
+           siteText: 'Visit' },
             {
               id: '8',
               projectName: 'Browser History',
@@ -112,7 +118,7 @@ class Home extends Component {
                 'Implemented Browser history application which is a clone for google history where users can search and delete history.',
               logoUrl:
                 'https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png',
-            },
+           siteText: 'Open' },
             {
               id: '9',
               projectName: 'Portfolio',
@@ -120,7 +126,7 @@ class Home extends Component {
               description:
                 'Developed a responsive web application for Portfolio where other people like interviewers can see about, education, list of projects, skills, contact info of mine',
               logoUrl: '',
-            },
+          siteText: 'Visit'  },
              */
           ]
 
@@ -144,7 +150,7 @@ class Home extends Component {
                       </ProjectDescription>
                       <VisitButton isDark={isDarkTheme}>
                         <VisitLink href={each.projectUrl} isDark={isDarkTheme}>
-                          Visit <IoArrowForward />
+                          {each.siteText} <IoArrowForward />
                         </VisitLink>
                       </VisitButton>
                     </ProjectsListItem>

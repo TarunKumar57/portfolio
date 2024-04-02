@@ -1,17 +1,16 @@
 import styled from 'styled-components'
 
-export const AboutContainer = styled.div`
-  background-image: url(${props =>
-    props.isDark
-      ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367869/download_iwonwv.jpg'
-      : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367876/winter-blue-pink-gradient-background-vector_53876-117276_uwqnv8.jpg'});
-  background-size: cover;
-  background-position: center;
-  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
-  //   transition: all 0.2s linear;
-`
+export const AboutContainer = styled.div``
+//   background-image: url(${props =>
+//     props.isDark
+//       ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367869/download_iwonwv.jpg'
+//       : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367876/winter-blue-pink-gradient-background-vector_53876-117276_uwqnv8.jpg'});
+//   background-size: cover;
+//   background-position: center;
+//   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+//      transition: all 0.2s linear;
+
 export const TopContainer = styled.div`
-  padding-top: 11vh;
   height: 100vh;
   font-family: Roboto;
   display: flex;
@@ -69,8 +68,8 @@ export const ContactButton = styled.button`
 `
 export const AboutMobileContainer = styled.div`
   padding: 0% 10%;
-  padding-top: 10vh;
-  min-height: 60vh;
+  padding-top: 3vh;
+  min-height: 50vh;
   font-family: Roboto;
   @media (min-width: 600px) {
     display: none;
