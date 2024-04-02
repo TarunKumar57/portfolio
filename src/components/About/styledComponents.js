@@ -25,10 +25,10 @@ export const TopContainer = styled.div`
 
 export const AboutImg = styled.img`
   border-radius: 12px;
-  transition: 1s;
+  transition: 0.5s;
   :hover {
     box-shadow: 0px 4px 16px 0px orange;
-    rotate: 5deg;
+    transform: scale(1.01);
   }
   @media (max-width: 600px) {
     height: 210px;
@@ -70,7 +70,7 @@ export const ContactButton = styled.button`
 export const AboutMobileContainer = styled.div`
   padding: 0% 10%;
   padding-top: 10vh;
-  height: 100vh;
+  min-height: 60vh;
   font-family: Roboto;
   @media (min-width: 600px) {
     display: none;

@@ -1,6 +1,6 @@
 import {Component} from 'react'
 
-import Header from '../Header'
+// import Header from '../Header'
 import {
   EducationContainer,
   EducationHeading,
@@ -30,7 +30,7 @@ class Education extends Component {
 
           return (
             <EducationContainer isDark={isDarkTheme}>
-              <Header />
+              {/* <Header /> */}
               <EducationHeading isDark={isDarkTheme}>
                 Education
               </EducationHeading>

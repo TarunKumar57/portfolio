@@ -8,7 +8,10 @@ export const EducationContainer = styled.div`
   background-size: cover;
   background-position: center;
   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
-  min-height: 108vh;
+  min-height: 118vh;
+  @media (max-width: 600px) {
+    min-height: 90vh;
+  }
 `
 
 export const EducationHeading = styled.h1`

@@ -10,7 +10,7 @@ export const ProjectsContainer = styled.div`
   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
 `
 export const TopContainer = styled.div`
-  padding-top: 11vh;
+  padding: 11vh 0px;
   min-height: 100vh;
   font-family: Roboto;
   display: flex;

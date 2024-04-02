@@ -2,7 +2,7 @@ import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {IoArrowForward} from 'react-icons/io5'
 
-import Header from '../Header'
+// import Header from '../Header'
 import {
   ProjectsContainer,
   TopContainer,
@@ -85,7 +85,8 @@ class Home extends Component {
               logoUrl:
                 'https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png ',
             },
-            {
+
+            /* {
               id: '6',
               projectName: 'IPL Dashboard',
               projectUrl: 'https://github.com/TarunKumar57/ipl-dashboard',
@@ -120,6 +121,7 @@ class Home extends Component {
                 'Developed a responsive web application for Portfolio where other people like interviewers can see about, education, list of projects, skills, contact info of mine',
               logoUrl: '',
             },
+             */
           ]
 
           const linkStyle = {
@@ -128,7 +130,7 @@ class Home extends Component {
           }
           return (
             <ProjectsContainer isDark={isDarkTheme}>
-              <Header />
+              {/* <Header /> */}
               <TopContainer>
                 <ProjectsText isDark={isDarkTheme}>Projects</ProjectsText>
 

@@ -1,8 +1,14 @@
 import {Component} from 'react'
 // import {Redirect, Route, Switch} from 'react-router-dom'
 import './App.css'
-// import Header from './components/Header'
+
+import Header from './components/Header'
+import Home from './components/Home'
+import About from './components/About'
+import Education from './components/Education'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
+
 import ThemeContext from './context/themeContext'
 // Replace your code here
 class App extends Component {
@@ -24,7 +30,12 @@ class App extends Component {
           changeTheme: this.changeTheme,
         }}
       >
+        <Header />
+        <Home />
+        <About />
+        <Education />
         <Projects />
+        <Contact />
         {/* <Switch>
           <Route exact path="/login" component={Login} />
           <ProtectedRoute exact path="/" component={Home} />

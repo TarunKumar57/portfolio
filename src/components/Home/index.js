@@ -9,7 +9,7 @@ import {
   FaTelegram,
 } from 'react-icons/fa'
 
-import Header from '../Header'
+// import Header from '../Header'
 import {
   HomeContainer,
   TopContainer,
@@ -41,7 +41,7 @@ class Home extends Component {
           }
           return (
             <HomeContainer isDark={isDarkTheme}>
-              <Header />
+              {/* <Header /> */}
               <TopContainer>
                 <HomeLeftContainer>
                   <HomeText>

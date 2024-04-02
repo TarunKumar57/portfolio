@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
-import {IoArrowDownCircleOutline} from 'react-icons/io5'
-import Header from '../Header'
+import {FaFileAlt} from 'react-icons/fa'
+// import Header from '../Header'
 import {
   AboutContainer,
   TopContainer,
@@ -29,7 +29,7 @@ class About extends Component {
           }
           return (
             <AboutContainer isDark={isDarkTheme}>
-              <Header />
+              {/* <Header /> */}
               <TopContainer>
                 <AboutImg
                   src="https://res.cloudinary.com/dz881zzvx/image/upload/v1687686673/IMG_20191018_115409_qablkk.jpg"
@@ -51,7 +51,7 @@ class About extends Component {
                   </AboutParagraph>
                   <Link to="./contact" style={linkStyle}>
                     <ContactButton type="button" isDark={isDarkTheme}>
-                      Contact <IoArrowDownCircleOutline size={20} />
+                      <FaFileAlt size={20} /> Resume
                     </ContactButton>
                   </Link>
                 </AboutRightContainer>
@@ -64,7 +64,7 @@ class About extends Component {
                   />
                   <Link to="./contact" style={linkStyle}>
                     <ContactButton type="button" isDark={isDarkTheme}>
-                      Contact <IoArrowDownCircleOutline size={20} />
+                      <FaFileAlt size={20} /> Resume
                     </ContactButton>
                   </Link>
                 </AboutMobileImageResumeContainer>

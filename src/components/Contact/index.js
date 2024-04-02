@@ -13,7 +13,7 @@ import {
   FaMapMarked,
 } from 'react-icons/fa'
 import {FcLike} from 'react-icons/fc'
-import Header from '../Header'
+// import Header from '../Header'
 import {
   ContactContainer,
   TopContainer,
@@ -50,7 +50,7 @@ class Home extends Component {
           }
           return (
             <ContactContainer isDark={isDarkTheme}>
-              <Header />
+              {/* <Header /> */}
 
               <TopContainer>
                 <AvatarImg
