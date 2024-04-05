@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
 import {FaFileAlt} from 'react-icons/fa'
 // import Header from '../Header'
 import {
@@ -11,6 +10,7 @@ import {
   AboutHeading,
   AboutParagraph,
   AboutPara,
+  AnchorLink,
   AboutMobileContainer,
   AboutMobileImageResumeContainer,
 } from './styledComponents'
@@ -23,12 +23,9 @@ class About extends Component {
       <ThemeContext.Consumer>
         {value => {
           const {isDarkTheme} = value
-          const linkStyle = {
-            textDecoration: 'none',
-            color: isDarkTheme ? '#f9f9f9' : '#181818',
-          }
+
           return (
-            <AboutContainer isDark={isDarkTheme}>
+            <AboutContainer isDark={isDarkTheme} id="about">
               {/* <Header /> */}
               <TopContainer>
                 <AboutImg
@@ -49,11 +46,15 @@ class About extends Component {
                       development as a Software Developer
                     </AboutPara>
                   </AboutParagraph>
-                  <Link to="./contact" style={linkStyle}>
+                  <AnchorLink
+                    href="https://drive.google.com/file/d/133tKXzw7DwOtgJNp4H9dZZPZ_1Oue6ft/view?usp=drivesdk"
+                    target="_blank"
+                    isDark={isDarkTheme}
+                  >
                     <ContactButton type="button" isDark={isDarkTheme}>
                       <FaFileAlt size={20} /> Resume
                     </ContactButton>
-                  </Link>
+                  </AnchorLink>
                 </AboutRightContainer>
               </TopContainer>
               <AboutMobileContainer>
@@ -62,11 +63,15 @@ class About extends Component {
                     src="https://res.cloudinary.com/dz881zzvx/image/upload/v1687686673/IMG_20191018_115409_qablkk.jpg"
                     alt="profile"
                   />
-                  <Link to="./contact" style={linkStyle}>
+                  <AnchorLink
+                    href="https://drive.google.com/file/d/133tKXzw7DwOtgJNp4H9dZZPZ_1Oue6ft/view?usp=drivesdk"
+                    target="_blank"
+                    isDark={isDarkTheme}
+                  >
                     <ContactButton type="button" isDark={isDarkTheme}>
                       <FaFileAlt size={20} /> Resume
                     </ContactButton>
-                  </Link>
+                  </AnchorLink>
                 </AboutMobileImageResumeContainer>
                 <AboutHeading isDark={isDarkTheme}>About Me</AboutHeading>
                 <AboutParagraph>

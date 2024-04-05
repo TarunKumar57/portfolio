@@ -14,6 +14,7 @@ export const EducationContainer = styled.div``
 //   }
 
 export const EducationHeading = styled.h1`
+  font-family: Roboto;
   color: ${props => (props.isDark ? 'orange' : '#fc6603')};
   font-size: 26px;
   margin: 0px;

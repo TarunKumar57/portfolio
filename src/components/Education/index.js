@@ -29,7 +29,7 @@ class Education extends Component {
           const container = isDarkTheme ? 'container-dark' : 'container-light'
 
           return (
-            <EducationContainer isDark={isDarkTheme}>
+            <EducationContainer isDark={isDarkTheme} id="education">
               {/* <Header /> */}
               <EducationHeading isDark={isDarkTheme}>
                 Education

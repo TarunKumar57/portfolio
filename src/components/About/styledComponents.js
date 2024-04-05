@@ -68,8 +68,8 @@ export const ContactButton = styled.button`
 `
 export const AboutMobileContainer = styled.div`
   padding: 0% 10%;
-  padding-top: 3vh;
-  min-height: 50vh;
+  padding-top: 10vh;
+  min-height: 50vh;width:100vw
   font-family: Roboto;
   @media (min-width: 600px) {
     display: none;
@@ -80,4 +80,8 @@ export const AboutMobileImageResumeContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+`
+export const AnchorLink = styled.a`
+  text-decoration: none;
+  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
 `

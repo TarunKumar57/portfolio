@@ -135,7 +135,7 @@ class Home extends Component {
             color: isDarkTheme ? '#f9f9f9' : '#181818',
           }
           return (
-            <ProjectsContainer isDark={isDarkTheme}>
+            <ProjectsContainer isDark={isDarkTheme} id="projects">
               {/* <Header /> */}
               <TopContainer>
                 <ProjectsText isDark={isDarkTheme}>Projects</ProjectsText>

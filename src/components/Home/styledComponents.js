@@ -10,8 +10,8 @@ export const HomeContainer = styled.div``
 //   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
 
 export const TopContainer = styled.div`
-  padding-top: 11vh;
   height: 100vh;
+  //   width: 100vw;
   font-family: Roboto;
   display: flex;
   flex-direction: row;
@@ -99,7 +99,10 @@ export const IconsListContainer = styled.ul`
   justify-content: space-between;
   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
 `
-
+export const AnchorLink = styled.a`
+  text-decoration: none;
+  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+`
 export const LinkedInIcon = styled.li`
   font-size: 30px;
   transition: font-size 1s;

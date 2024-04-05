@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
 import {IoArrowDownCircleOutline} from 'react-icons/io5'
 import {
   FaFileAlt,
@@ -21,6 +20,7 @@ import {
   Name,
   ButtonsContainer,
   IconsListContainer,
+  AnchorLink,
   LinkedInIcon,
   GithubIcon,
   InstagramIcon,
@@ -35,12 +35,9 @@ class Home extends Component {
       <ThemeContext.Consumer>
         {value => {
           const {isDarkTheme} = value
-          const linkStyle = {
-            textDecoration: 'none',
-            color: isDarkTheme ? '#f9f9f9' : '#181818',
-          }
+
           return (
-            <HomeContainer isDark={isDarkTheme}>
+            <HomeContainer isDark={isDarkTheme} id="home">
               {/* <Header /> */}
               <TopContainer>
                 <HomeLeftContainer>
@@ -52,39 +49,48 @@ class Home extends Component {
                   </HomeText>
                   <HomeText>I am a Web developer</HomeText>
                   <ButtonsContainer>
-                    <Link to="./about" style={linkStyle}>
+                    <AnchorLink href="#about">
                       <AboutButton type="button" isDark={isDarkTheme}>
                         About me <IoArrowDownCircleOutline size={20} />
                       </AboutButton>
-                    </Link>
-                    <Link to="./resume" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink
+                      href="https://drive.google.com/file/d/133tKXzw7DwOtgJNp4H9dZZPZ_1Oue6ft/view?usp=drivesdk"
+                      target="_blank"
+                      isDark={isDarkTheme}
+                    >
                       <AboutButton type="button" isDark={isDarkTheme}>
                         <FaFileAlt size={20} /> Resume
                       </AboutButton>
-                    </Link>
+                    </AnchorLink>
                   </ButtonsContainer>
                   <IconsListContainer isDark={isDarkTheme}>
-                    <Link to="./" style={linkStyle}>
+                    <AnchorLink
+                      href="https://www.linkedin.com/in/tarun-kumar-725465242/"
+                      isDark={isDarkTheme}
+                    >
                       <LinkedInIcon>
                         <FaLinkedin />
                       </LinkedInIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink
+                      href="https://github.com/TarunKumar57?tab=repositories"
+                      isDark={isDarkTheme}
+                    >
                       <GithubIcon>
                         <FaGithubSquare />
                       </GithubIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <InstagramIcon>
                         <FaInstagramSquare />
                       </InstagramIcon>
-                    </Link>
-
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <TelegramIcon>
                         <FaTelegram />
                       </TelegramIcon>
-                    </Link>
+                    </AnchorLink>
                   </IconsListContainer>
                 </HomeLeftContainer>
                 {/* <img

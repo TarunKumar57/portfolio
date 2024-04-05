@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
 import {IoMail} from 'react-icons/io5'
 import {IoIosCall} from 'react-icons/io'
 import {GrMapLocation} from 'react-icons/gr'
@@ -23,6 +22,7 @@ import {
   ContactText,
   Name,
   IconsListContainer,
+  AnchorLink,
   LinkedInIcon,
   GithubIcon,
   FacebookIcon,
@@ -31,6 +31,7 @@ import {
   TelegramIcon,
   ContactDetails,
   ContactDetailsText,
+  ContactName,
   DesignedByText,
   LikeIcon,
   ContactMobileContainer,
@@ -44,12 +45,9 @@ class Home extends Component {
       <ThemeContext.Consumer>
         {value => {
           const {isDarkTheme} = value
-          const linkStyle = {
-            textDecoration: 'none',
-            color: isDarkTheme ? '#f9f9f9' : '#181818',
-          }
+
           return (
-            <ContactContainer isDark={isDarkTheme}>
+            <ContactContainer isDark={isDarkTheme} id="contact">
               {/* <Header /> */}
 
               <TopContainer>
@@ -62,46 +60,55 @@ class Home extends Component {
                   alt="img"
                 />
                 <ContactLeftContainer>
-                  <ContactText>Tarun Kumar Portfolio</ContactText>
+                  <ContactName>Tarun Kumar Portfolio</ContactName>
                   <p>
                     Thank you for visiting my personal portfolio website.
                     <br /> Connect with me over socials.
                   </p>
                   <IconsListContainer isDark={isDarkTheme}>
-                    <Link to="./" style={linkStyle}>
+                    <AnchorLink
+                      href="https://www.linkedin.com/in/tarun-kumar-725465242/"
+                      isDark={isDarkTheme}
+                    >
                       <LinkedInIcon>
                         <FaLinkedin />
                       </LinkedInIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink
+                      href="https://github.com/TarunKumar57?tab=repositories"
+                      isDark={isDarkTheme}
+                    >
                       <GithubIcon>
                         <FaGithubSquare />
                       </GithubIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink
+                      href="https://www.instagram.com/tarun_the_thunderer?igsh=MTVwa25kM3hjd3Bjdw=="
+                      isDark={isDarkTheme}
+                    >
                       <InstagramIcon>
                         <FaInstagramSquare />
                       </InstagramIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <FacebookIcon>
                         <FaFacebookSquare />
                       </FacebookIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <WhatsAppIcon>
                         <FaWhatsappSquare />
                       </WhatsAppIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <TelegramIcon>
                         <FaTelegram />
                       </TelegramIcon>
-                    </Link>
+                    </AnchorLink>
                   </IconsListContainer>
                 </ContactLeftContainer>
                 <ContactRightContainer>
-                  <ContactText>Contact Me</ContactText>
+                  <ContactText isDark={isDarkTheme}>Contact Me</ContactText>
                   <ContactDetails>
                     <IoMail size={25} />
                     <ContactDetailsText> tk96925@gmail.com</ContactDetailsText>
@@ -122,42 +129,42 @@ class Home extends Component {
                   </ContactDetails>
                 </ContactRightContainer>
                 <ContactMobileContainer>
-                  <ContactText>Tarun Kumar Portfolio</ContactText>
+                  <ContactName>Tarun Kumar Portfolio</ContactName>
                   <p>
                     Thank you for visiting my personal portfolio website.
                     <br /> Connect with me over socials.
                   </p>
                   <IconsListContainer isDark={isDarkTheme}>
-                    <Link to="./" style={linkStyle}>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <LinkedInIcon>
                         <FaLinkedin />
                       </LinkedInIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <GithubIcon>
                         <FaGithubSquare />
                       </GithubIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <InstagramIcon>
                         <FaInstagramSquare />
                       </InstagramIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <FacebookIcon>
                         <FaFacebookSquare />
                       </FacebookIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <WhatsAppIcon>
                         <FaWhatsappSquare />
                       </WhatsAppIcon>
-                    </Link>
-                    <Link to="./" style={linkStyle}>
+                    </AnchorLink>
+                    <AnchorLink href="" isDark={isDarkTheme}>
                       <TelegramIcon>
                         <FaTelegram />
                       </TelegramIcon>
-                    </Link>
+                    </AnchorLink>
                   </IconsListContainer>
                 </ContactMobileContainer>
               </TopContainer>

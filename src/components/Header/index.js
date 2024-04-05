@@ -1,4 +1,3 @@
-import {Link, withRouter} from 'react-router-dom'
 import {useState} from 'react'
 import {BsInfoCircle} from 'react-icons/bs'
 import {IoSunny, IoMoon, IoHome} from 'react-icons/io5'
@@ -6,12 +5,19 @@ import {IoMdContact} from 'react-icons/io'
 import {AiFillCode} from 'react-icons/ai'
 import ThemeContext from '../../context/themeContext'
 
+// import Home from '../Home'
+// import About from '../About'
+// import Education from '../Education'
+// import Projects from '../Projects'
+// import Contact from '../Contact'
+
 import {
   NavContainer,
   Logo,
   NavIcon,
   NavListItem,
   NavListContainer,
+  AnchorLink,
   NavMobileContainer,
   MobileLogo,
   NavMobileIconsList,
@@ -22,6 +28,7 @@ const activeMenuCardItem = {
   initial: 'INITIAL',
   home: 'HOME',
   about: 'ABOUT',
+  education: 'EDUCATION',
   projects: 'PROJECTS',
   contact: 'CONTACT',
 }
@@ -33,23 +40,19 @@ const Header = () => {
       {value => {
         const {isDarkTheme, changeTheme} = value
 
-        const linkStyle = {
-          textDecoration: 'none',
-          color: isDarkTheme ? '#f9f9f9' : '#181818',
-        }
         const iconActiveColor = '#ff0b37'
 
         return (
           <>
             <NavContainer isDark={isDarkTheme}>
-              <Link to="/" style={linkStyle}>
+              <AnchorLink href="#home" isDark={isDarkTheme}>
                 <Logo
-                  isDark={isDarkTheme}
                   key="HOME"
+                  isDark={isDarkTheme}
                   isActive={activeMenu === activeMenuCardItem.home}
                   onClick={() => changeActiveMenu(activeMenuCardItem.home)}
                 >{`<Tarun Kumar/>`}</Logo>
-              </Link>
+              </AnchorLink>
               <NavListContainer>
                 <NavListItem
                   key="HOME"
@@ -57,9 +60,9 @@ const Header = () => {
                   isActive={activeMenu === activeMenuCardItem.home}
                   onClick={() => changeActiveMenu(activeMenuCardItem.home)}
                 >
-                  <Link to="/" style={linkStyle}>
+                  <AnchorLink href="#home" isDark={isDarkTheme}>
                     Home
-                  </Link>
+                  </AnchorLink>
                 </NavListItem>
                 <NavListItem
                   key="ABOUT"
@@ -67,9 +70,19 @@ const Header = () => {
                   isActive={activeMenu === activeMenuCardItem.about}
                   onClick={() => changeActiveMenu(activeMenuCardItem.about)}
                 >
-                  <Link to="/about" style={linkStyle}>
+                  <AnchorLink href="#about" isDark={isDarkTheme}>
                     About
-                  </Link>
+                  </AnchorLink>
+                </NavListItem>
+                <NavListItem
+                  key="EDUCATION"
+                  isDark={isDarkTheme}
+                  isActive={activeMenu === activeMenuCardItem.education}
+                  onClick={() => changeActiveMenu(activeMenuCardItem.education)}
+                >
+                  <AnchorLink href="#education" isDark={isDarkTheme}>
+                    Education
+                  </AnchorLink>
                 </NavListItem>
                 <NavListItem
                   key="PROJECTS"
@@ -77,9 +90,9 @@ const Header = () => {
                   isActive={activeMenu === activeMenuCardItem.projects}
                   onClick={() => changeActiveMenu(activeMenuCardItem.projects)}
                 >
-                  <Link to="/projects" style={linkStyle}>
+                  <AnchorLink href="#projects" isDark={isDarkTheme}>
                     Projects
-                  </Link>
+                  </AnchorLink>
                 </NavListItem>
                 <NavListItem
                   key="CONTACT"
@@ -87,9 +100,9 @@ const Header = () => {
                   isActive={activeMenu === activeMenuCardItem.contact}
                   onClick={() => changeActiveMenu(activeMenuCardItem.contact)}
                 >
-                  <Link to="/contact" style={linkStyle}>
+                  <AnchorLink href="#contact" isDark={isDarkTheme}>
                     Contact
-                  </Link>
+                  </AnchorLink>
                 </NavListItem>
                 <NavIcon
                   onClick={() => changeTheme(!isDarkTheme)}
@@ -102,62 +115,62 @@ const Header = () => {
 
             <NavMobileContainer isDark={isDarkTheme}>
               <NavMobileIconsList>
-                <Link to="/" style={linkStyle}>
+                <AnchorLink href="#home" isDark={isDarkTheme}>
                   <MobileLogo
                     isDark={isDarkTheme}
                     key="HOME"
                     isActive={activeMenu === activeMenuCardItem.home}
                     onClick={() => changeActiveMenu(activeMenuCardItem.home)}
                   >{`<TK/>`}</MobileLogo>
-                </Link>
+                </AnchorLink>
                 <NavMobileIcon
                   key="HOME"
                   isDark={isDarkTheme}
                   onClick={() => changeActiveMenu(activeMenuCardItem.home)}
                 >
-                  <Link to="/" style={linkStyle}>
+                  <AnchorLink href="#home" isDark={isDarkTheme}>
                     <IoHome
                       color={
                         activeMenu === activeMenuCardItem.home &&
                         iconActiveColor
                       }
                     />
-                  </Link>
+                  </AnchorLink>
                 </NavMobileIcon>
                 <NavMobileIcon
                   key="ABOUT"
                   isDark={isDarkTheme}
                   onClick={() => changeActiveMenu(activeMenuCardItem.about)}
                 >
-                  <Link to="/about" style={linkStyle}>
+                  <AnchorLink href="#about" isDark={isDarkTheme}>
                     <BsInfoCircle
                       color={
                         activeMenu === activeMenuCardItem.about &&
                         iconActiveColor
                       }
                     />
-                  </Link>
+                  </AnchorLink>
                 </NavMobileIcon>
                 <NavMobileIcon
                   key="PROJECTS"
                   isDark={isDarkTheme}
                   onClick={() => changeActiveMenu(activeMenuCardItem.projects)}
                 >
-                  <Link to="/projects" style={linkStyle}>
+                  <AnchorLink href="#projects" isDark={isDarkTheme}>
                     <AiFillCode
                       color={
                         activeMenu === activeMenuCardItem.projects &&
                         iconActiveColor
                       }
                     />
-                  </Link>
+                  </AnchorLink>
                 </NavMobileIcon>
                 <NavMobileIcon
                   key="CONTACT"
                   isDark={isDarkTheme}
                   onClick={() => changeActiveMenu(activeMenuCardItem.contact)}
                 >
-                  <Link to="/contact" style={linkStyle}>
+                  <AnchorLink href="#contact" isDark={isDarkTheme}>
                     <IoMdContact
                       size={35}
                       color={
@@ -165,7 +178,7 @@ const Header = () => {
                         iconActiveColor
                       }
                     />
-                  </Link>
+                  </AnchorLink>
                 </NavMobileIcon>
                 <NavMobileIcon
                   data-testid="theme"
@@ -175,6 +188,19 @@ const Header = () => {
                 </NavMobileIcon>
               </NavMobileIconsList>
             </NavMobileContainer>
+            {/*           
+ <AllContainer isDark={isDarkTheme}>
+              <Home />
+              <Hr />
+              <About />
+              <Hr />
+              <Education />
+              <Hr />
+              <Projects />
+              <Hr />
+              <Contact />
+              <Hr />
+            </AllContainer> */}
           </>
         )
       }}
@@ -182,4 +208,4 @@ const Header = () => {
   )
 }
 
-export default withRouter(Header)
+export default Header

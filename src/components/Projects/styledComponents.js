@@ -21,8 +21,7 @@ export const TopContainer = styled.div`
 export const ProjectsText = styled.h1`
   color: ${props => (props.isDark ? 'orange' : '#fc6603')};
   margin: 9px;
-  //   text-align: center;
-  padding-top: 3vh;
+  padding-top: 9vh;
 `
 export const ProjectsListContainer = styled.ul`
   list-style-type: none;
@@ -45,6 +44,7 @@ export const ProjectsListItem = styled.li`
   padding: 0px 9px;
   @media (max-width: 600px) {
     width: 90vw;
+    margin-bottom: 12px;
   }
   display: flex;
   flex-direction: column;

@@ -33,7 +33,10 @@ export const ContactMobileContainer = styled.div`
     display: none;
   }
 `
-export const ContactText = styled.h1``
+export const ContactText = styled.h1`
+  color: ${props => (props.isDark ? 'orange' : '#fc6603')};
+`
+export const ContactName = styled.h1``
 export const Name = styled.span`
   color: ${props => (props.isDark ? 'orange' : '#fc6603')};
 `
@@ -73,7 +76,10 @@ export const IconsListContainer = styled.ul`
   justify-content: space-between;
   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
 `
-
+export const AnchorLink = styled.a`
+  text-decoration: none;
+  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+`
 export const LinkedInIcon = styled.li`
   font-size: 30px;
   transition: font-size 1s;

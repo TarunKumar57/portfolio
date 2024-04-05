@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ThemeContext = React.createContext({
-  isDarkTheme: true,
+  isDarkTheme: false,
   changeTheme: () => {},
   activeMenu: 'INITIAL',
   changeActiveMenu: () => {},

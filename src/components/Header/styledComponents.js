@@ -11,11 +11,12 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   height: 10vh;
   font-family: Roboto;
-  margin-bottom: 0px;
+  // margin: 0px -10px;
   background-color: transparent;
   @media (max-width: 600px) {
     display: none;
   }
+  background-color: rgba(100, 116, 139, 0.5);
 `
 
 export const Logo = styled.h1`
@@ -76,10 +77,11 @@ export const NavMobileContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 70px;
-  margin-bottom: 0px;
+  // margin: 0px -10px;
   @media (min-width: 600px) {
     display: none;
   }
+  background-color: rgba(100, 116, 139, 0.5);
 `
 export const MobileLogo = styled.h1`
   font-size: 30px;
@@ -108,4 +110,9 @@ export const NavMobileIcon = styled.li`
     const color = isDark ? '#424242' : '#e2e8f0'
     return props.isActive ? color : ''
   }};
+`
+
+export const AnchorLink = styled.a`
+  text-decoration: none;
+  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
 `

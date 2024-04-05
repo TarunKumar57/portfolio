@@ -44,20 +44,6 @@ class AllComponents extends Component {
           <Contact />
           <Hr />
         </AllContainer>
-        {/* <Switch>
-          <Route exact path="/login" component={Login} />
-          <ProtectedRoute exact path="/" component={Home} />
-          <ProtectedRoute exact path="/trending" component={Trending} />
-          <ProtectedRoute exact path="/gaming" component={Gaming} />
-          <ProtectedRoute
-            exact
-            path="/videos/:id"
-            component={VideoItemDetails}
-          />
-          <ProtectedRoute exact path="/saved-videos" component={SavedVideos} />
-          <Route path="/not-found" component={NotFound} />
-          <Redirect to="not-found" />
-        </Switch> */}
       </ThemeContext.Provider>
     )
   }
