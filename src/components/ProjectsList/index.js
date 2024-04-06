@@ -130,7 +130,7 @@ const projectsLists = [
   {
     id: '11',
     projectName: 'Nxt Trendz',
-    projectUrl: 'https://tksnxttrendz6.ccbp.tech/login',
+    projectUrl: 'https://github.com/TarunKumar57/nxt-trendz-app',
     description:
       'Nxt Trendz application which is a clone for ECommerce applications like Amazon, Flipkart.',
     logoUrl: 'https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png',
