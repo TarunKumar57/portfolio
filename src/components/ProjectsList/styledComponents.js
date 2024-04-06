@@ -1,13 +1,6 @@
 import styled from 'styled-components'
 
 export const ProjectsContainer = styled.div``
-//   background-image: url(${props =>
-//     props.isDark
-//       ? 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367869/download_iwonwv.jpg'
-//       : 'https://res.cloudinary.com/dz881zzvx/image/upload/v1711367876/winter-blue-pink-gradient-background-vector_53876-117276_uwqnv8.jpg'});
-//   background-size: cover;
-//   background-position: center;
-//   color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
 
 export const TopContainer = styled.div`
   min-height: 100vh;
@@ -19,7 +12,7 @@ export const TopContainer = styled.div`
   margin-bottom: 5vh;
 `
 export const ProjectsText = styled.h1`
-  color: ${props => (props.isDark ? 'orange' : '#fc6603')};
+  color: #fc6603;
   margin: 9px;
   padding-top: 9vh;
 `
@@ -36,9 +29,10 @@ export const ProjectsListContainer = styled.ul`
   }
 `
 export const ProjectsListItem = styled.li`
-  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+  color: #181818;
   width: 321px;
-  border: 1px solid ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+  box-shadow: 0px 4px 16px 0px #bfbfbf;
+  border: 1px solid #ffffff;
   border-radius: 9px;
   margin: 9px;
   padding: 0px 9px;
@@ -74,26 +68,30 @@ export const VisitLink = styled.a`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+  color: #181818;
+  :hover {
+    color: #f9f9f9;
+  }
 `
 export const VisitButton = styled.button`
   font-family: Roboto;
   width: 80px;
   font-size: 18px;
   background-color: transparent;
-  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
-  border: 1px solid ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+  color: #181818;
+  border: 1px solid #181818;
   border-radius: 5px;
   :hover {
-    background-color: ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
-    border: 1px solid ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
+    background-color: #3b82f6;
+    border: 1px solid #3b82f6;
+    color: white;
     justify-content: space-around;
   }
   margin-bottom: 9px;
 `
 export const ViewAllButton = styled.button`
-  background-color: ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
-  border: 1px solid ${props => (props.isDark ? '#3b82f6' : '#4f46e5')};
+  background-color: #4f46e5;
+  border: 1px solid #4f46e5;
   height: 40px;
   width: 123px;
   border-radius: 5px;
@@ -106,12 +104,24 @@ export const ViewAllButton = styled.button`
   align-items: center;
   justify-content: space-evenly;
   :hover {
-    background-color: ${props => (props.isDark ? '#4f46e5' : '#3b82f6')};
+    background-color: #3b82f6;
     justify-content: space-around;
   }
   cursor: pointer;
 `
-export const AnchorLink = styled.a`
-  text-decoration: none;
-  color: ${props => (props.isDark ? '#f9f9f9' : '#181818')};
+export const TabsContainer = styled.div`
+  margin-top: 3%;
+`
+export const TabButton = styled.button`
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 24px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 24px;
+
+  border-bottom: 2px solid ${props => (props.isActive ? '#0b69ff' : 'none')};
+  color: ${props => (props.isActive ? '#3e4c59' : '#9aa5b1')};
 `

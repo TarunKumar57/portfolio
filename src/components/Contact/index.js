@@ -39,7 +39,7 @@ import {
 
 import ThemeContext from '../../context/themeContext'
 
-class Home extends Component {
+class Contact extends Component {
   render() {
     return (
       <ThemeContext.Consumer>
@@ -183,4 +183,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default Contact
