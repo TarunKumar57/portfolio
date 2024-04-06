@@ -52,7 +52,7 @@ export const ProjectLogo = styled.img`
   outline: none;
   margin-top: 9px;
   @media (max-width: 600px) {
-    height: 100%;
+    height: 100px;
   }
 `
 export const ProjectName = styled.h2`
@@ -124,4 +124,7 @@ export const TabButton = styled.button`
 
   border-bottom: 2px solid ${props => (props.isActive ? '#0b69ff' : 'none')};
   color: ${props => (props.isActive ? '#3e4c59' : '#9aa5b1')};
+  @media (max-width: 600px) {
+    margin: 11px;
+  }
 `
