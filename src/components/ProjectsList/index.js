@@ -432,6 +432,37 @@ const projectsLists = [
     categoryId: 'OTHERS',
   },
   {
+    id: '21',
+    projectName: 'Money Manager',
+    projectUrl: 'https://tksmoneymanager.ccbp.tech/',
+    description:
+      'Money Manager App where you can see income, expenses and balance.',
+    logoUrl:
+      'https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png',
+    siteText: 'Visit',
+    categoryId: 'OTHERS',
+  },
+  {
+    id: '22',
+    projectName: 'Appointments App',
+    projectUrl: 'https://tksapntmntapp.ccbp.tech/',
+    description: 'Appointments App where you can add list of appointments.',
+    logoUrl:
+      'https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png',
+    siteText: 'Visit',
+    categoryId: 'OTHERS',
+  },
+  {
+    id: '23',
+    projectName: 'Comments App',
+    projectUrl: 'https://tkscommentsapp.ccbp.tech/',
+    description: 'Comments App where you can see and add list of comments.',
+    logoUrl:
+      'https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png',
+    siteText: 'Visit',
+    categoryId: 'OTHERS',
+  },
+  {
     id: '84',
     projectName: 'CCBP Timeline',
     projectUrl: 'https://tksccbptimeline.ccbp.tech/',
@@ -460,15 +491,6 @@ const projectsLists = [
     categoryId: 'OTHERS',
   },
   {
-    id: '87',
-    projectName: 'Visit Countries',
-    projectUrl: 'https://tksvstcountries.ccbp.tech/',
-    description: 'Visit Countries App where users can list of countries.',
-    logoUrl: '',
-    siteText: 'Visit',
-    categoryId: 'OTHERS',
-  },
-  {
     id: '88',
     projectName: 'Character Counter',
     projectUrl: 'https://tkscharcounter.ccbp.tech/',
@@ -484,6 +506,62 @@ const projectsLists = [
     description: 'Implemented Music Playlist App you can see list of playlist.',
     logoUrl:
       'https://assets.ccbp.in/frontend/react-js/music-playlist/music-playlist-Edsheeran-bg.png ',
+    siteText: 'Visit',
+    categoryId: 'OTHERS',
+  },
+  {
+    id: '97',
+    projectName: 'Registration Form',
+    projectUrl: 'https://tksrgstrtionfrm.ccbp.tech/',
+    description: 'Registration Form App where users can register here.',
+    logoUrl: 'https://assets.ccbp.in/frontend/react-js/success-icon-img.png',
+    siteText: 'Visit',
+    categoryId: 'OTHERS',
+  },
+  {
+    id: '98',
+    projectName: 'Cryptocurrency Tracker',
+    projectUrl: 'https://tkscryptocurenc.ccbp.tech/',
+    description:
+      'App where user can see available crypto currencies and their market price',
+    logoUrl: 'https://assets.ccbp.in/frontend/react-js/cryptocurrency-bg.png ',
+    siteText: 'Visit',
+    categoryId: 'OTHERS',
+  },
+  {
+    id: '25',
+    projectName: 'App Store',
+    projectUrl: 'https://tksappstore.ccbp.tech/',
+    description: 'App Store where you can see and search list of apps.',
+    logoUrl:
+      'https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png',
+    siteText: 'Visit',
+    categoryId: 'OTHERS',
+  },
+  {
+    id: '29',
+    projectName: 'Google Search Suggestions',
+    projectUrl: 'https://tksgglsrchsgstn.ccbp.tech/',
+    description: 'Google search suggestions gives suggestions.',
+    logoUrl: 'https://assets.ccbp.in/frontend/react-js/google-logo.png',
+    siteText: 'Visit',
+    categoryId: 'OTHERS',
+  },
+  {
+    id: '99',
+    projectName: 'Routing Practice',
+    projectUrl: 'https://tksroutngprctce.ccbp.tech/',
+    description: 'Routing Practice App you can navigate with route.',
+    logoUrl: 'https://assets.ccbp.in/frontend/react-js/wave-logo-img.png',
+    siteText: 'Visit',
+    categoryId: 'OTHERS',
+  },
+  {
+    id: '100',
+    projectName: 'Blog List',
+    projectUrl: 'https://tksbloglist.ccbp.tech/',
+    description: 'Blog List App where you can see list of blogs.',
+    logoUrl: 'https://assets.ccbp.in/frontend/react-js/profile-img.png',
     siteText: 'Visit',
     categoryId: 'OTHERS',
   },
@@ -555,39 +633,11 @@ const projectsLists = [
     categoryId: 'OTHERS',
   },
   {
-    id: '97',
-    projectName: 'Registration Form',
-    projectUrl: 'https://tksrgstrtionfrm.ccbp.tech/',
-    description: 'Registration Form App where users can register here.',
-    logoUrl: 'https://assets.ccbp.in/frontend/react-js/success-icon-img.png',
-    siteText: 'Visit',
-    categoryId: 'OTHERS',
-  },
-  {
-    id: '98',
-    projectName: 'Cryptocurrency Tracker',
-    projectUrl: 'https://tkscryptocurenc.ccbp.tech/',
-    description:
-      'App where user can see available crypto currencies and their market price',
-    logoUrl: 'https://assets.ccbp.in/frontend/react-js/cryptocurrency-bg.png ',
-    siteText: 'Visit',
-    categoryId: 'OTHERS',
-  },
-  {
-    id: '99',
-    projectName: 'Routing Practice',
-    projectUrl: 'https://tksroutngprctce.ccbp.tech/',
-    description: 'Routing Practice App you can navigate with route.',
-    logoUrl: 'https://assets.ccbp.in/frontend/react-js/wave-logo-img.png',
-    siteText: 'Visit',
-    categoryId: 'OTHERS',
-  },
-  {
-    id: '100',
-    projectName: 'Blog List',
-    projectUrl: 'https://tksbloglist.ccbp.tech/',
-    description: 'Blog List App where you can see list of blogs.',
-    logoUrl: 'https://assets.ccbp.in/frontend/react-js/profile-img.png',
+    id: '87',
+    projectName: 'Visit Countries',
+    projectUrl: 'https://tksvstcountries.ccbp.tech/',
+    description: 'Visit Countries App where users can list of countries.',
+    logoUrl: '',
     siteText: 'Visit',
     categoryId: 'OTHERS',
   },
@@ -601,52 +651,11 @@ const projectsLists = [
     categoryId: 'OTHERS',
   },
   {
-    id: '21',
-    projectName: 'Money Manager',
-    projectUrl: 'https://tksmoneymanager.ccbp.tech/',
-    description:
-      'Money Manager App where you can see income, expenses and balance.',
-    logoUrl:
-      'https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png',
-    siteText: 'Visit',
-    categoryId: 'OTHERS',
-  },
-  {
-    id: '22',
-    projectName: 'Appointments App',
-    projectUrl: 'https://tksapntmntapp.ccbp.tech/',
-    description: 'Appointments App where you can add list of appointments.',
-    logoUrl:
-      'https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png',
-    siteText: 'Visit',
-    categoryId: 'OTHERS',
-  },
-  {
-    id: '23',
-    projectName: 'Comments App',
-    projectUrl: 'https://tkscommentsapp.ccbp.tech/',
-    description: 'Comments App where you can see and add list of comments.',
-    logoUrl:
-      'https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png',
-    siteText: 'Visit',
-    categoryId: 'OTHERS',
-  },
-  {
     id: '24',
     projectName: 'Reviews App',
     projectUrl: 'https://tksreviewsapp.ccbp.tech/',
     description: 'Reviews App where you can see reviews in carousel.',
     logoUrl: '',
-    siteText: 'Visit',
-    categoryId: 'OTHERS',
-  },
-  {
-    id: '25',
-    projectName: 'App Store',
-    projectUrl: 'https://tksappstore.ccbp.tech/',
-    description: 'App Store where you can see and search list of apps.',
-    logoUrl:
-      'https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png',
     siteText: 'Visit',
     categoryId: 'OTHERS',
   },
@@ -674,15 +683,6 @@ const projectsLists = [
     projectUrl: 'https://tksfeedbackapp.ccbp.tech/',
     description: 'Feedback App where you can give feedback.',
     logoUrl: '',
-    siteText: 'Visit',
-    categoryId: 'OTHERS',
-  },
-  {
-    id: '29',
-    projectName: 'Google Search Suggestions',
-    projectUrl: 'https://tksgglsrchsgstn.ccbp.tech/',
-    description: 'Google search suggestions gives suggestions.',
-    logoUrl: 'https://assets.ccbp.in/frontend/react-js/google-logo.png',
     siteText: 'Visit',
     categoryId: 'OTHERS',
   },
@@ -777,7 +777,7 @@ const linkStyle = {
 
 class ProjectsList extends Component {
   state = {
-    activeTabId: tabsList[4].tabId,
+    activeTabId: tabsList[0].tabId,
   }
 
   clickTabItem = tabId => {
