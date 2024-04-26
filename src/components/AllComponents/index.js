@@ -5,12 +5,14 @@ import Header from '../Header'
 import Home from '../Home'
 import About from '../About'
 import Education from '../Education'
+import Skills from '../Skills'
 import Projects from '../Projects'
 import Contact from '../Contact'
 
 import ThemeContext from '../../context/themeContext'
 
 import {AllContainer, Hr} from './styledComponents'
+import './index.css'
 // Replace your code here
 class AllComponents extends Component {
   state = {
@@ -38,6 +40,8 @@ class AllComponents extends Component {
           <About />
           <Hr />
           <Education />
+          <Hr className="hr-line" />
+          <Skills />
           <Hr />
           <Projects />
           <Hr />
